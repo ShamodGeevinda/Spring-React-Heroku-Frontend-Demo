@@ -30,6 +30,7 @@ export default function Student() {
     }).then(() => {
       console.log("New Student added");
     });
+    window.location.reload(false);
   };
 
   useEffect(() => {
