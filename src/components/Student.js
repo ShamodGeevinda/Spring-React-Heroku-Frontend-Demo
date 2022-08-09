@@ -23,7 +23,7 @@ export default function Student() {
     e.preventDefault();
     const student = { id, name, address };
     console.log(student);
-    fetch("http://localhost:8080/api/v1/user/saveUser", {
+    fetch("https://shamma-demo-spring.herokuapp.com/api/v1/user/saveUser", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(student),
@@ -33,7 +33,7 @@ export default function Student() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/user/getUsers")
+    fetch("https://shamma-demo-spring.herokuapp.com/api/v1/user/getUsers")
       .then((res) => res.json())
       .then((result) => {
         setStudents(result);
